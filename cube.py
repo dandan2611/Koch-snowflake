@@ -45,20 +45,23 @@ def vonKoch(n, length):
         turtle.forward(length)
         return
 
-    vonKoch(n - 1, length / 3)
+    splittedLength = length / 3
+    lowerN = n - 1
+
+    vonKoch(lowerN, splittedLength)
     turtle.left(90)
-    vonKoch(n - 1, length / 3)
+    vonKoch(lowerN, splittedLength)
     turtle.right(90)
-    vonKoch(n - 1, length / 3)
+    vonKoch(lowerN, splittedLength)
     turtle.right(90)
-    vonKoch(n - 1, length / 3)
-    vonKoch(n - 1, length / 3)
+    vonKoch(lowerN, splittedLength)
+    vonKoch(lowerN, splittedLength)
     turtle.left(90)
-    vonKoch(n - 1, length / 3)
+    vonKoch(lowerN, splittedLength)
     turtle.left(90)
-    vonKoch(n - 1, length / 3)
+    vonKoch(lowerN, splittedLength)
     turtle.right(90)
-    vonKoch(n - 1, length / 3)
+    vonKoch(lowerN, splittedLength)
 
 
 # Begin -- Drawing
