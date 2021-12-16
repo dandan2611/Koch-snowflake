@@ -49,7 +49,7 @@ def vonKoch(n, length):
     lowerN = n - 1
 
     vonKoch(lowerN, splittedLength)
-    turtle.left(60)  # On pivote de 60 degrés vers la gauche (triangle isocèle)
+    turtle.left(60)  # On pivote de 60 degrés vers la gauche (triangle équilatéral)
     vonKoch(lowerN, splittedLength)
     turtle.right(120)
     vonKoch(lowerN, splittedLength)
@@ -62,6 +62,7 @@ def vonKoch(n, length):
 turtle.penup()
 turtle.setpos(-LENGTH / 2, -300)
 turtle.pendown()
+
 vonKoch(N, LENGTH)
 
 # End -- Drawing
